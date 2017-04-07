@@ -1,4 +1,4 @@
-package com.getfire.spring.ch3.lookup;
+package com.getfire.spring.ch3.lookup.lookupMethod;
 
 import com.getfire.spring.ch3.MyHelper;
 

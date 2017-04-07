@@ -69,12 +69,24 @@
     </bean>
 
     <bean id="helper" class="com.getfire.spring.ch3.MyHelper" scope="prototype"/>
-    <bean id="abstractLookupBean" class="com.getfire.spring.ch3.lookup.AbstractLookupDemoBean">
+
+    <bean id="abstractLookupBean" class="com.getfire.spring.ch3.lookup.lookupMethod.AbstractLookupDemoBean">
         <lookup-method name="getMyHelper" bean="helper"/>
     </bean>
-    <bean id="standartLookupBean" class="com.getfire.spring.ch3.lookup.StandartLookupDemoBean">
+
+    <bean id="standartLookupBean" class="com.getfire.spring.ch3.lookup.lookupMethod.StandartLookupDemoBean">
         <property name="myHelper" ref="helper"/>
     </bean>
+
+    <bean id="methodReplacer" class="com.getfire.spring.ch3.lookup.methodReplacement.FormatMessageReplacer"/>
+
+    <bean id="replacementTarget" class="com.getfire.spring.ch3.lookup.methodReplacement.ReplaceTarget">
+        <replaced-method name="formatMessage" replacer="methodReplacer">
+            <arg-type>String</arg-type>
+        </replaced-method>
+    </bean>
+
+    <bean id="standartTarget" class="com.getfire.spring.ch3.lookup.methodReplacement.ReplaceTarget"/>
 
 
 </beans>
