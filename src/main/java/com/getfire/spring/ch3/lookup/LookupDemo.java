@@ -31,6 +31,7 @@ public class LookupDemo {
         stopWatch.stop();
 
         System.out.println("100000 gets took "+ stopWatch.getTotalTimeMillis() + " ms");
+
     }
 
 }
