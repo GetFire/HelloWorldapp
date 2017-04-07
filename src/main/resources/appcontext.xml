@@ -87,6 +87,19 @@
     </bean>
 
     <bean id="standartTarget" class="com.getfire.spring.ch3.lookup.methodReplacement.ReplaceTarget"/>
+    <bean id="foo" class="com.getfire.spring.ch3.autowired.Foo"/>
+    <bean id="bar1" class="com.getfire.spring.ch3.autowired.Bar"/>
+    <bean id="targetByName" autowire="byName" class="com.getfire.spring.ch3.autowired.Target" lazy-init="true"/>
+    <bean id="targetConstructor" autowire="constructor" class="com.getfire.spring.ch3.autowired.Target"
+          lazy-init="true"/>
+    <bean id="targetByType" autowire="byType" class="com.getfire.spring.ch3.autowired.Target" lazy-init="true"/>
+    <bean id="inheritParent" class="com.getfire.spring.ch3.inheritance.SimpleBean">
+        <property name="name" value="Chris Schaefer"/>
+        <property name="age" value="32"/>
+    </bean>
+    <bean id="inheritChild" class="com.getfire.spring.ch3.inheritance.SimpleBean" parent="inheritParent">
+        <property name="age" value="33"/>
+    </bean>
 
 
 </beans>

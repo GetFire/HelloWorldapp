@@ -14,6 +14,7 @@ public class MethodReplacementExample {
     }
 
     private static void dispalyInfo(ReplaceTarget target) {
+        
         System.out.println(target.formatMessage("Hello World!"));
         StopWatch stopWatch = new StopWatch();
         stopWatch.start("perTest");
