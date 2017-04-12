@@ -1,4 +1,4 @@
-package com.getfire.spring.ch3.messageProvider.annotation;
+package com.getfire.spring.ch3.annotation;
 
 import com.getfire.spring.ch3.messageProvider.MessageProvider;
 import com.getfire.spring.ch3.messageProvider.MessageRenderer;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
 
     <bean name="customEditorCogigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
@@ -14,5 +14,18 @@
     </bean>
     <bean id="exampleBean" class="com.getfire.spring.ch4.customEditor.CustomEditorExample">
         <property name="name" value="Denys Azhymov"/>
+    </bean>
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="labels"/>
+    </bean>
+
+    <bean id="publisher" class="com.getfire.spring.ch4.events.Publisher"/>
+    <bean id="messageEventListener" class="com.getfire.spring.ch4.events.MessageEventListener"/>
+
+    <bean id="messageRenderer" class="com.getfire.spring.ch4.javaCodeConfig.exampleFromCh3.StandartOutMessageRenderer">
+        <property name="messageProvider" ref="messageProvider"/>
+    </bean>
+    <bean id="messageProvider" class="com.getfire.spring.ch4.javaCodeConfig.exampleFromCh3.ConfigurableMessageProvider">
+       <property name="message"  value="This is configurable message from app context ch4"/>
     </bean>
 </beans>
