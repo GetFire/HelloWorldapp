@@ -16,7 +16,7 @@ public class CollectionInjection {
     private Set set;
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ch3/appcontext.xml");
         CollectionInjection instance = context.getBean("injectCollection", CollectionInjection.class);
         instance.displayInfo();
 

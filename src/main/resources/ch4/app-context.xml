@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean name="customEditorCogigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+        <property name="customEditors">
+            <map>
+                <entry key="com.getfire.spring.ch4.customEditor.Name"
+                       value="com.getfire.spring.ch4.customEditor.NamePropertyEditor"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="exampleBean" class="com.getfire.spring.ch4.customEditor.CustomEditorExample">
+        <property name="name" value="Denys Azhymov"/>
+    </bean>
+</beans>

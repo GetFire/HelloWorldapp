@@ -7,7 +7,7 @@ import org.springframework.util.StopWatch;
 
 public class LookupDemo {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ch3/appcontext.xml");
         DemoBean abstractBean = context.getBean("abstractLookupBean", DemoBean.class);
         DemoBean standartBean = context.getBean("standartLookupBean", DemoBean.class);
 

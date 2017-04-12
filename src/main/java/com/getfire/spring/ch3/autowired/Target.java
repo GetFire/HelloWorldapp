@@ -35,7 +35,7 @@ public class Target {
     }
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ch3/appcontext.xml");
         Target t = null;
         System.out.println("Using by Name:\n");
         t = context.getBean("targetByName",Target.class);

@@ -11,7 +11,7 @@ public class InjectSimple {
     private long ageInSeconds;
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ch3/appcontext.xml");
         InjectSimple simple = context.getBean("injectSimple", InjectSimple.class);
         System.out.println(simple);
     }

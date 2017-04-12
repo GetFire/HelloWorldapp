@@ -100,6 +100,15 @@
     <bean id="inheritChild" class="com.getfire.spring.ch3.inheritance.SimpleBean" parent="inheritParent">
         <property name="age" value="33"/>
     </bean>
+    <bean id="initClass" class="com.getfire.spring.ch4.InitClass" init-method="init" >
+        <property name="properties">
+            <list>
+                <value>Hello</value>
+                <value>Hello1</value>
+                <value>Hello13</value>
+            </list>
+        </property>
+    </bean>
 
 
 </beans>

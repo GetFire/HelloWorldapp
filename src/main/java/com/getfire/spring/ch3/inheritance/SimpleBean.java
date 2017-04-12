@@ -21,7 +21,7 @@ public class SimpleBean {
     }
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ch3/appcontext.xml");
         SimpleBean parent = context.getBean("inheritParent", SimpleBean.class);
         SimpleBean child = context.getBean("inheritChild", SimpleBean.class);
 

@@ -6,7 +6,7 @@ import org.springframework.util.StopWatch;
 
 public class MethodReplacementExample {
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ch3/appcontext.xml");
         ReplaceTarget replaceTarget = context.getBean("replacementTarget", ReplaceTarget.class);
         ReplaceTarget standartTarget = context.getBean("standartTarget", ReplaceTarget.class);
         dispalyInfo(replaceTarget);

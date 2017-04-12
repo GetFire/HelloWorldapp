@@ -61,7 +61,7 @@ public class InjectSimpleSpel {
     }
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("appcontext.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("ch3/appcontext.xml");
         InjectSimpleSpel simpleSpel = context.getBean("injectSimpleSpel",InjectSimpleSpel.class);
         System.out.println(simpleSpel);
 
