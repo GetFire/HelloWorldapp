@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:application.properties" local-override="true"/>
 
 
     <bean name="customEditorCogigurer" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
@@ -27,5 +30,10 @@
     </bean>
     <bean id="messageProvider" class="com.getfire.spring.ch4.javaCodeConfig.exampleFromCh3.ConfigurableMessageProvider">
        <property name="message"  value="This is configurable message from app context ch4"/>
+    </bean>
+
+    <bean id="appProperty" class="com.getfire.spring.ch4.environment.AppProperty">
+        <property name="applicationHome" value="${application.home}"/>
+        <property name="userHome" value="${user.home}"/>
     </bean>
 </beans>

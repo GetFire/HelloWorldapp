@@ -30,9 +30,9 @@ public class AppConfigVer2 {
     @Bean(name = "messageRenderer")
     @Scope(value = "prototype")
     @DependsOn(value = "messageProvider")
-    public MessageRenderer messageRenderer() {
+    public MessageRenderer messageRenderer(MessageProvider messageProvider) {
         MessageRenderer renderer = new StandartOutMessageRenderer();
-        renderer.setMessageProvider(messageProvider());
+        renderer.setMessageProvider(messageProvider);
         return renderer;
     }
 }
