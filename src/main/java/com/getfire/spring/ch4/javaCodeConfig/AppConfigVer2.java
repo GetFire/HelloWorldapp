@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @ImportResource(value = "classpath:ch3/parent.xml")
 @Import(AppConfig.class)
-@PropertySource(value = "classpath:message.properties")
+@PropertySource(value = "classpath:ch4/message.properties")
 @ComponentScan(basePackages = {"com.getfire.spring.ch4"})
 @EnableTransactionManagement
 public class AppConfigVer2 {

@@ -1,3 +1,5 @@
+package ch4
+
 import com.getfire.spring.ch4.groovyConfig.Contact
 
 beans{
