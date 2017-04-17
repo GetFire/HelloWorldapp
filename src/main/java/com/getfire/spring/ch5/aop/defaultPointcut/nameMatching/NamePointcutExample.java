@@ -14,6 +14,14 @@ public class NamePointcutExample {
         pc.addMethodName("bar");
         Advisor advisor = new DefaultPointcutAdvisor(pc, new SimpleAdvice());
 
+        /*
+        !!!!!!!OR!!!!!!
+
+        NameMatchMethodPointcutAdvisor advisor = new NameMatchMethodPointcutAdvisor(new SimpleAdvice());
+        advisor.addMethodName("foo");
+        advisor.addMethodName("bar");
+        */
+
         ProxyFactory pf = new ProxyFactory();
         pf.setTarget(target);
         pf.addAdvisor(advisor);
