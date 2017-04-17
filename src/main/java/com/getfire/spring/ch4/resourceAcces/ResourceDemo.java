@@ -15,7 +15,7 @@ public class ResourceDemo {
         System.out.println(file.getPath());
         Resource res1 = context.getResource("file://" + file.getPath());
         displayInfo(res1);
-        Resource res2 = context.getResource("classpath:test.txt");
+        Resource res2 = context.getResource("classpath:text.txt");
         displayInfo(res2);
         Resource res3 = context.getResource("https://www.google.com.ua");
         displayInfo(res3);
